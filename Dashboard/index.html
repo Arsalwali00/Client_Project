@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar" aria-label="Sidebar Navigation">
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="1.jpg" alt="Profile Image">
+            </div>
+            <div class="profile-details">
+                <p class="profile-name">Arslan Wali</p>
+                <p class="profile-email">Wali@gmail.com</p>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-item active" aria-label="Driver Management">
+                <div class="icon ellipse"><i class="fas fa-user-tie"></i></div>
+                <span>Driver Management</span>
+            </div>
+            <div class="menu-item" aria-label="Client Management">
+                <div class="icon ellipse"><i class="fas fa-users"></i></div>
+                <span>Client Management</span>
+            </div>
+            <div class="menu-item" aria-label="Delivery Management">
+                <div class="icon ellipse"><i class="fas fa-truck"></i></div>
+                <span>Delivery Management</span>
+            </div>
+            <div class="menu-item" aria-label="Settings">
+                <div class="icon ellipse"><i class="fas fa-cogs"></i></div>
+                <span>Settings</span>
+            </div>
+            <div class="menu-item logout" aria-label="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <header>
+            <div class="header-left">
+                <h1>Driver Dashboard</h1>
+                <p>Welcome Admin</p>
+            </div>
+            <div class="header-right">
+                <div class="search-bar" role="search">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button class="icon-btn" aria-label="Search">
+                        <i class="fas fa-search"></i> <!-- Font Awesome Search Icon -->
+                    </button>
+                </div>
+                <div class="icons">
+                    <div class="icon message" aria-label="Messages">
+                        <i class="fas fa-comments"></i> <!-- Font Awesome Message Icon -->
+                    </div>
+                    <div class="icon notification" aria-label="Notifications">
+                        <i class="fas fa-bell"></i> <!-- Font Awesome Notification Icon -->
+                    </div>
+                    <div class="user-profile">
+                        <img src="1.jpg" alt="User Profile">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Cards Section -->
+        <section class="cards">
+            <div class="card">
+                <i class="fas fa-users"></i>
+                <h2>Manage Drivers</h2>
+                <p>Overview of all drivers</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-truck"></i>
+                <h2>Assign Deliveries</h2>
+                <p>Manage delivery assignments</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h2>Monitor Performance</h2>
+                <p>Track driver performance</p>
+            </div>
+        </section>
+<!-- Driver Management and Information Container -->
+
+<section class="management-container">
+    <!-- Driver Management -->
+    <div class="driver-management">
+        <div class="table-container">
+            <h2>
+                Driver Management
+                <button class="action-btn add-user" aria-label="Add a new driver">
+                    <span class="icon"><i class="fas fa-user-plus"></i></span>
+                </button>
+            </h2>
+            <p class="description">
+                Manage all aspects of your drivers, including assignments, profiles, and schedules.
+            </p>
+            <table role="grid" aria-describedby="table-description">
+                <thead>
+                    <tr>
+                        <th scope="col">Driver Name</th>
+                        <th scope="col">Availability</th>
+                        <th scope="col">Assignments</th>
+                        <th scope="col">Performance</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dee</td>
+                        <td>Available</td>
+                        <td>02</td>
+                        <td>89%</td>
+                        <td>
+                            <button class="action-btn edit" aria-label="Edit Dee's information">
+                                <span class="action-icon"><i class="fas fa-edit"></i></span>
+                            </button>
+                            <button class="action-btn delete" aria-label="Delete Dee">
+                                <span class="action-icon"><i class="fas fa-trash"></i></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Roo</td>
+                        <td>On Duty</td>
+                        <td>06</td>
+                        <td>92%</td>
+                        <td>
+                            <button class="action-btn edit" aria-label="Edit Roo's information">
+                                <span class="action-icon"><i class="fas fa-edit"></i></span>
+                            </button>
+                            <button class="action-btn delete" aria-label="Delete Roo">
+                                <span class="action-icon"><i class="fas fa-trash"></i></span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Driver Information -->
+    <div class="driver-info">
+        <h2>Driver Information</h2> <!-- Add heading here -->
+        <div class="driver-info-header">
+            <div class="image-wrapper">
+                <img src="1.jpg" alt="Photo of Driver Name" class="driver-photo">
+                <button class="action-btn edit-photo" aria-label="Edit driver photo">
+                    <i class="fas fa-edit"></i>
+                </button>
+            </div>
+        </div>
+        <div class="driver-details">
+            <h3>Driver Name</h3>
+            <p>Email: client@example.com</p>
+            <p>Phone: +1223455676743</p>
+            <p>Company Name: If applicable</p>
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Performance Overview -->
+        <section class="performance">
+            <div class="performance-overview">
+                <h2>Performance</h2>
+                <p>95% On-Time</p>
+                <p>Customer Rating: 4.8</p>
+            </div>
+            <div class="calendar">
+                <h2>Performance Calendar</h2>
+                <!-- Placeholder for calendar; can be implemented with JavaScript or third-party libraries -->
+                <p>Calendar coming soon...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
